@@ -1,0 +1,13 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+    - name: "Do a update"
+      yum:
+        name:
+          - nginx
+          - postgresql
+          - postgresql-server
+        state: present
